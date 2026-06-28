@@ -1,16 +1,50 @@
-# React + Vite
+Netflix Login Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack clone of Netflix's sign-in page, built with React and Express.js, featuring form validation and a mock authentication flow.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+Netflix-style login UI built with React and Tailwind CSS
+Client-side form validation (Gmail format check, password rules)
+Inline error messages for invalid email/password input
+Mock backend authentication with Express.js
+CORS-enabled API for cross-origin requests between frontend and backend
+Responsive layout for mobile and desktop
+Deployed on Vercel (frontend and backend as separate projects)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Frontend
+
+
+React (Create React App)
+React Router DOM
+Tailwind CSS v3
+Axios
+Context API for auth state management
+
+
+Backend
+
+
+Node.js
+Express.js (ESM modules)
+CORS middleware
+
+
+Deployment
+
+
+Vercel (monorepo with separate frontend/backend projects)
+Deployment Notes
+
+This project is deployed as two separate Vercel projects from the same monorepo:
+
+
+Frontend — Root Directory set to frontend, Framework Preset: Create React App
+Backend — Root Directory set to backend, Framework Preset: Other
+
+
+The frontend communicates with the backend via its stable Vercel domain (not the deployment-specific URL, which changes on every deploy).
