@@ -4,6 +4,8 @@ import axios from "axios"
 
 const AuthenContext = createContext()
 
+const API = "https://netflix-dummy-login.onrender.com"
+
 export function AuthProvider({ children }) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -56,7 +58,7 @@ export function AuthProvider({ children }) {
     setLoading(true)
 
     axios
-      .post("http://localhost:5000/api/login", { email, password })
+      .post(`${API}/api/login`, { email, password })
       .then((res) => {
         navigate("/dashboard")
       })
